@@ -23,7 +23,7 @@ jobs:
         run: poetry install
 
       - name: build
-        run: poetry run python watchlist.py
+        run: poetry run python main.py
 
       - name: publish
         uses: peaceiris/actions-gh-pages@v3
