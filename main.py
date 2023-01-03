@@ -1,6 +1,7 @@
 import gzip
 import json
 import os
+import re
 import shutil
 import time
 
@@ -55,7 +56,7 @@ urls = [
 
 # iterate countries and get the region
 for country in urls:
-
+    print(country)
     d = get_page(country)
 
     soup = BeautifulSoup(d.text, "html.parser")
@@ -64,7 +65,12 @@ for country in urls:
     report = soup.find("div", class_="report__content")
 
     summary = "\n\n".join(
-        [x.text for x in report.find("h2", text="EXECUTIVE SUMMARY").parent.select("p")]
+        [
+            x.text
+            for x in report.find(
+                "h2", string=re.compile(r"Executive Summary", re.I)
+            ).parent.select("p")
+        ]
     )
 
     OUT[country_name] = {"name": country_name, "summary": summary, "url": country}
