@@ -4,8 +4,8 @@ Converts the [USA Department of State Human Rights Practices](https://www.state.
 
 ## Data
 
-* [Latest JSON File](https://www.github.com/christopherpickering/human_rights_practices/tree/build/data.json) - approx 150 kB - updated monthly
-* [Latest JSON File (gzip)](https://www.github.com/christopherpickering/human_rights_practices/tree/build/data.json.gz) - approx 50 kB - updated monthly
+* [Latest JSON File](https://www.github.com/christopherpickering/human_rights_practices/tree/build/data.json) - approx 500 kB - updated monthly
+* [Latest JSON File (gzip)](https://www.github.com/christopherpickering/human_rights_practices/tree/build/data.json.gz) - approx 100 kB - updated monthly
 
 ## Building your own file
 
