@@ -34,7 +34,6 @@ p = get_page(BASE_URL)
 
 soup = BeautifulSoup(p.text, "html.parser")
 
-print(p.text)
 # get the most current report
 current_year_url = soup.find("a", class_="collection-result__link", href=True).get(
     "href"
