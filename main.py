@@ -32,6 +32,8 @@ OUT = {}
 
 p = get_page(BASE_URL)
 
+print(p.content)
+
 soup = BeautifulSoup(p.text, "html.parser")
 
 # get the most current report
