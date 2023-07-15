@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 
 def get_page(url):
+    proxies = {'http': 'http://50.219.106.82:80'} 
     HEADERS = {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br",
@@ -26,7 +27,7 @@ def get_page(url):
     retries = 1
     while retries < 5:
         try:
-            return requests.get(url, timeout=30, headers=HEADERS)
+            return requests.get(url, timeout=30, headers=HEADERS, proxies=proxies)
         except Exception as e:
             wait = retries * 5
             print(f"Error! Waiting {wait} secs and re-trying {url}...")
