@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "human_rights_practices"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Christopher Pickering <https://going.bg"]
 license = "MIT"
@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.9"
 requests = "^2.28.1"
 bs4 = "^0.0.1"
-importlib-metadata = "^6.0.0"
+importlib-metadata = "^7.0.0"
 
 [tool.poetry.dev-dependencies]
 tox = "^4.0.2"
